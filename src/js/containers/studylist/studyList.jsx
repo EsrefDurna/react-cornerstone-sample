@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Checkbox, Table } from 'react-bootstrap'; //Collapse,
+import { Table } from 'react-bootstrap'; //Collapse,
 import { Link } from 'react-router-dom';
-
+import '../../../scss/main.scss';
 
 class studyList extends Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class studyList extends Component {
             <tbody>
               <tr>                                      
                   <td>                                   
-                      <Link to={"/study/1234"}> Joe Doe </Link>
+                      <Link to={"/viewport"}> Joe Doe </Link>
                   </td> 
                   <td>                                           
                       12345

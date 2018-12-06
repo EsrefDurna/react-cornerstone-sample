@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import { history, BrowseStudy, Header, SideCol } from '../components';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
-import study from './study/study';
+//import study from './study/study';
+import CornerstoneViewport from './CornerstoneViewport/CornerstoneViewport/CornerstoneViewport';
 import studyList from './studylist/studyList';
 import { Route, Router } from 'react-router-dom';
+
+
+import { cornerstone, cornerstoneTools } from '../meteor/ohif-cornerstone/main';
+//import cornerstone from 'cornerstone-core';
+//import cornerstoneTools from 'cornerstone-tools';
+
+import exampleData from '../testdata/study1.json'
 
 class App extends Component {
   constructor(props) {
@@ -40,12 +48,13 @@ class App extends Component {
             }
         },
         {
-            path: '/study',
+            path: '/viewport',
             exact: false,
-            component: study,
+            component: CornerstoneViewport,
             props: {
-                toggleSideColVisibility: this.toggleSideColVisibility,
-                toggleBrowseStudyVisibility: this.toggleBrowseStudyVisibility
+                viewportData: exampleData,
+                cornerstone: cornerstone,                 
+                cornerstoneTools: cornerstoneTools
             }
         },
         {
@@ -59,8 +68,7 @@ class App extends Component {
         }     
     ];   
 
-    return (   
-       
+    return (          
     <Router history={history}>
       <div className={mainContentClasses}>
                 <Header
