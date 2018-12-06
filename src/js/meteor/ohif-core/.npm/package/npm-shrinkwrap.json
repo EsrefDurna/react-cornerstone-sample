@@ -1,0 +1,10 @@
+{
+  "lockfileVersion": 1,
+  "dependencies": {
+    "isomorphic-base64": {
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/isomorphic-base64/-/isomorphic-base64-1.0.2.tgz",
+      "integrity": "sha1-9Caq6CVpuopOxcpzrSGkSrHueAM="
+    }
+  }
+}
