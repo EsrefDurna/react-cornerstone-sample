@@ -1,0 +1,97 @@
+// Sidebar
+// =======
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  width: $nav-height;
+
+  margin: 0;
+  overflow: auto;
+  background: $grey;
+  border: 0;
+  border-radius: 0;
+  transition: left 250ms;
+
+  > .container {
+    width: auto;
+    padding: 0;
+  }
+
+  .navbar-nav {
+
+    > li {
+      width: $nav-height;
+      height: $nav-height;
+      border-bottom: 1px solid $coal-75;
+
+      > a {
+        width: 100%;
+        height: 100%;
+        padding-top: 18px;
+        font-size: $font-size-small;
+        font-weight: 500;
+        color: $nav-item-color;
+        line-height: 16px;
+        text-align: center;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+          color: $white;
+
+          .icon,.storage-icon {
+            fill: $white;
+          }
+        }
+
+        &.active {
+          background: $coal-75;
+        }
+
+        .icon,.storage-icon {
+          display: block;
+          margin: 0 auto 10px;
+          fill: $nav-item-color;
+        }
+
+        .sidebar-alert {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          height: 16px;
+          min-width: 16px;
+          padding: 0 5px 0 4.5px;
+          font-size: $font-size-counter;
+          font-weight: bold;
+          line-height: 16px;
+          color: $white;
+          background: $status-red;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
+
+
+// Sidebar transition
+// ------------------
+
+.sidebar-transition-enter {
+  left: -$nav-height;
+  transition: left 0;
+}
+
+.sidebar-transition-leave {
+  left: 0;
+  transition: left 250ms;
+
+  &.sidebar-transition-leave-active {
+    left: -$nav-height;
+  }
+}

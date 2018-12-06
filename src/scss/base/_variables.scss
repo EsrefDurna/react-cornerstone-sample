@@ -1,0 +1,138 @@
+// Variables
+// =========
+
+// Colors
+// ------
+
+$text-color:          #fff;//#2d3237;
+
+$white:               #fff;
+$black:               #000;
+$brand-red:           #c92037;
+
+// Primary color
+$blue:                #25aee4;
+$blue-dark:           #209ac9;
+$blue-75:             #5cc3eb;
+$blue-50:             #aadef2;
+$blue-25:             #e6f4fa;
+
+// Secondary colors
+$green:               #63c7b3;
+$green-dark:          #57b3a0;
+$green-75:            #88d4c5;
+$green-50:            #b3e3da;
+$green-25:            #e4f7f3;
+
+$yellow:              #e2e439;
+$yellow-dark:         #d4d63a;
+$yellow-75:           #e9eb67;
+$yellow-50:           #f1f29e;
+$yellow-25:           #f9fad8;
+
+$red:                   #ee514f;
+
+$purple:            #800080;
+
+// Greyscale colors
+$grey:                #cfd0d1;
+$grey-dark:           #93a1ab;
+$grey-75:             #dee0e0;
+$grey-50:             #edeff0;
+$grey-25:             #fafafa;
+
+$coal:                #2d3237;
+$coal-dark:           #202326;
+$coal-75:             #373d42;
+$coal-50:             #4a5259;
+$coal-25:             #5f6a73;
+
+// Status colors
+$status-red:          #ee514f;
+$status-red-light:    #ffc3c2;
+
+$status-orange:       #f7ab23;
+$status-orange-light: #ffdda3;
+
+$status-green:        #9fdb18;
+$status-green-light:  #d7f299;
+
+
+// General
+// -------
+
+$body-min-width:         1024px;
+$content-max-width:      1610px;
+$content-sm-max-width:   864px;
+$side-col-width:         384px;
+$gutter-lg:              24px;
+
+$container-padding:      48px;
+$base-margin:            16px;
+$min-margin:            5px;
+$box-shadow:             0 1px 4px rgba($black, 0.2);
+
+$font-size-counter:      0.6875rem; // 11px
+
+
+// Type
+// ----
+
+$font-family:     'Roboto', Helvetica, arial, sans-serif;
+$font-size:       16px;
+$font-size-btn:   0.8125rem;  // 14px
+$font-size-small: 0.75rem;    // 12px
+
+$font-size-h1:    2rem;       // 32px
+$font-size-h2:    1.5rem;     // 24px
+$font-size-h3:    1.25rem;    // 20px
+$font-size-h4:    1rem;       // 16px
+
+
+// Navs
+// ----
+
+$nav-height:        56px;
+$nav-tabs-height:   44px;
+$nav-height-login:  152px;
+$nav-item-color:    #a4a8ac;
+$nav-sticky-zindex: 1029;
+
+
+// Buttons
+// -------
+
+$btn-height:       40px;
+$btn-sm-height:    32px;
+$btn-xs-height:    24px;
+
+
+// Dropdowns
+// ---------
+
+$dropdown-max-height: 266px;
+$dropdown-min-width:  256px;
+$dropdown-lg-width:   864px;
+$dropdown-action-width:  180px;
+$dropdown-select-width:  288px;
+
+// Modals
+// ------
+
+$modal-width: 968px;
+$modal-width-medium: 800px;
+$modal-width-sm: 600px;
+$modal-height-sm: 600px;
+$modal-width-xsm: 400px;
+
+// Forms
+// -----
+
+$form-control-height: 40px;
+$placeholder-color:   #a8acad;
+
+
+// Tables
+// ------
+
+$td-height: 48px;

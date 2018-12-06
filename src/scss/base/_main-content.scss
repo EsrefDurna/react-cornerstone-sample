@@ -1,0 +1,86 @@
+// Main Content
+// ============
+
+.main-content {
+  height: 600px;
+  padding: $nav-height 0 0 0;
+  transition: padding-right 500ms 25ms;
+  background-color: $black;
+  color: $white;
+  width: 100%; 
+
+  &.side-col-visible {
+    padding-right: $side-col-width;
+
+    @media (max-width: ($body-min-width + $side-col-width)) {
+      padding-right: 0;
+    }
+  }
+
+  &.is-login {
+    padding-right: 0;
+  }
+}
+
+.main-container {
+  width: 100%;
+  //max-width: $content-max-width + ($container-padding * 2);
+  //padding: $container-padding;
+  margin: 0 auto;
+
+  &.narrow {
+    max-width: $content-sm-max-width + ($container-padding * 2);
+  }
+}
+
+.top-container {
+  width: 100%;
+  max-width: $content-max-width + ($container-padding * 2);
+  padding: $container-padding $container-padding 0 $container-padding;
+  margin: 0 auto;
+
+&.narrow {
+    max-width: $content-sm-max-width + ($container-padding * 2);
+  }
+}
+
+.bottom-container {
+  width: 100%;
+  max-width: $content-max-width + ($container-padding * 2);
+  padding: 0 $container-padding;
+  margin: 0 auto;
+
+ &.narrow {
+    max-width: $content-sm-max-width + ($container-padding * 2);
+    }
+}
+
+
+// Main Content transition
+// -----------------------
+
+.main-content-transition {
+  position: relative;
+
+  > div {
+    transition: opacity 200ms;
+
+    &.main-content-transition-enter {
+      opacity: 0;
+      transition: opacity 0;
+    }
+
+    &.main-content-transition-leave {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      opacity: 1;
+
+      &.main-content-transition-leave-active {
+        opacity: 0;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,152 @@
+// Icons
+// =====
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: $text-color;
+  stroke: none;
+
+  .btn > & {
+    margin-top: -1px;
+  }
+}
+
+
+// Status icons
+// ------------
+
+.icon-alert,
+.icon-ok,
+.icon-warning,
+.icon-gray,
+.icon-create{
+  fill: none;
+  stroke-width: 2px;
+}
+
+.icon-create{
+    stroke : $blue;
+}
+
+.icon-gray{
+    stroke : $grey;
+}
+.icon-alert {
+  stroke: $status-red;
+}
+
+.icon-ok {
+  stroke: $status-green;
+}
+
+.icon-warning {
+  stroke: $status-orange;
+}
+
+
+// Other icons
+// -----------
+
+.icongraybox{
+    fill: $grey;
+}
+
+.icon-stop {
+  fill: $status-red;
+}
+
+.icon-check {
+  fill: $status-green;
+}
+.icon-white {
+  fill: $white;
+}
+.icon-close {
+  stroke: $grey-dark;
+}
+
+.fill-alert {
+
+  &,
+  .dropdown-toggle & {
+    fill: $status-red;
+  }
+}
+
+.fill-white {
+  fill: $white;
+}
+
+// Login
+// -----
+
+.icon-login-wrapper {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 48px;
+    display: block;
+    width: calc(50% - 64px);
+    border-bottom: 1px solid $grey-75;
+    content: '';
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+.icon-login {
+  position: relative;
+  width: 48px;
+  height: 72px;
+  margin: 0 auto 10px;
+
+  .lock-shackle {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    transition: top 250ms;
+    fill: $grey;
+  }
+
+  .lock-body {
+    position: absolute;
+    top: 30px;
+    fill: $grey;
+  }
+
+  .lock-body-rect {
+    position: absolute;
+    fill: $grey-25;
+    stroke: $grey;
+    stroke-width: 2;
+  }
+
+  .lock-hole {
+    position: absolute;
+    top: 44px;
+    left: 20px;
+    transition: transform 250ms;
+    fill: $grey;
+  }
+
+
+  &.open > {
+
+    .lock-shackle {
+      top: 0;
+    }
+
+    .lock-hole {
+      transform: rotate(90deg);
+    }
+  }
+}

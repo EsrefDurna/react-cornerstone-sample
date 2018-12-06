@@ -1,0 +1,268 @@
+// Tables
+// ======
+
+.table,
+.table-condensed {
+
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        height: $td-height;
+        border-top: 0;
+      }
+
+      > th {
+        padding: 12px $base-margin 10px;
+        vertical-align: middle;
+      }
+
+      > td {
+        position: relative;
+        padding: 11px $base-margin;
+        vertical-align: top;
+        border-bottom: 1px solid $grey-50;
+      }
+
+      &.tr-link {
+        cursor: pointer;
+
+        &:hover {
+          background: $blue-25;
+        }
+      }
+
+      &:hover {
+
+        .td-dropdown-info {
+          display: block;
+        }
+      }
+    }
+
+    &.no-bg {
+
+      > tr {
+        > th,
+        > td {
+          color: $text-color;
+          background: none;
+        }
+      }
+    }
+  }
+
+  &.tr-hover > tbody > tr {
+
+    &:hover {
+      background: $blue-25;
+    }
+  }
+
+  .table {
+    background: none;
+  }
+
+  > thead > tr > th {
+    font-size: $font-size-small;
+    font-weight: 500;
+    color: $white;    
+    background: $coal-25;
+    .icon {
+      fill: $grey-dark;
+    }
+
+    &.table-sorter {
+      color: $coal-25;
+
+      &:hover,
+      &:active,
+      &.active {
+        background: $grey-50;
+      }
+
+      &.active {
+        border-color: $blue;
+      }
+
+      a {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        padding: 12px $base-margin;
+        color: inherit;
+
+        > .icon-caret {
+          position: absolute;
+          top: 50%;
+          right: $base-margin;
+          transform: translateY(-50%);
+        }
+
+        &:hover {
+          color: $text-color;
+
+          > .icon-caret {
+            fill: $text-color;
+          }
+        }
+      }
+
+      &.text-right {
+
+        > a {
+          padding-right: $base-margin;
+          padding-left: $base-margin * 2.5;
+        }
+
+        &.active > a {
+          padding-right: $base-margin * 2.5;
+          padding-left: $base-margin;
+        }
+      }
+    }
+  }
+}
+
+.chart-table {
+  font-size: $font-size-small;
+
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        height: auto;
+        padding: 5px 0 5px 10px;
+        vertical-align: middle;
+        border: 0;
+
+        &:first-of-type {
+          padding-left: 0;
+        }
+
+        &.chart-table-header {
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+.table-alerts {
+  background: $grey-25;
+
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > td {
+        height: auto;
+        padding: 5px 16px;
+        border: 0;
+      }
+    }
+  }
+}
+
+.table-condensed {
+
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th {
+        height: auto;
+        padding: 5px 5px 11px 0;
+      }
+
+      > td {
+        height: auto;
+        padding: 5px 5px 5px 0;
+        border: 0;
+
+        &:last-of-type {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.select-table {
+  width: 100%;  
+  margin-bottom: 0;
+  background-color: $coal-50;
+  font-size: $font-size-small;
+  > thead {
+    > tr {
+      > th {
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 400;    
+        white-space: nowrap;
+        &:hover {          
+          background-color: $grey-dark;
+        }
+      }
+      
+    }
+  }
+  > tbody {
+
+    > tr {
+      &:hover {
+        color: $white;
+        cursor: pointer;
+        background-color: $coal-75;
+      }
+      > td {
+        white-space: nowrap;
+        color: $white;
+        &:last-of-type {
+          padding-right: 10px;
+        }
+      }
+
+      &.tr-link {
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 400;
+
+        .dropdown-menu &:hover {
+          color: $white;
+          background: none;
+        }
+
+        > td {
+          white-space: nowrap;
+          color: $white;
+          &:last-of-type {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    color: $grey;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.namevaluetable{
+
+    tr td:nth-child(n+2){
+        font-weight : 600;
+        b{
+            font-weight : 600;
+        }
+    }
+}

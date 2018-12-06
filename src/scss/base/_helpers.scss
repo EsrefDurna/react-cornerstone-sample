@@ -1,0 +1,632 @@
+  // Helpers
+// =======
+
+.page-header-helper {
+  float: right;
+  font-size: $font-size-small;
+  font-weight: 500;
+
+  h1 + &,
+  h1 & {
+    line-height: $font-size-h1;
+  }
+
+  h2 + &,
+  h2 & {
+    line-height: $font-size-h2;
+  }
+
+  h3 + &,
+  h3 & {
+    line-height: $font-size-h3;
+  }
+
+  h4 + &,
+  h4 & {
+    line-height: $font-size-h4;
+  }
+}
+
+.icon-white-bg  {
+
+  .icon {
+    fill: $white;
+
+    &.icon-caret-down {
+      margin-right: 2px;
+    }
+}
+
+  &:hover > .icon,
+  .open & .icon {
+    fill: $white;
+  }
+}
+
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-transform-none {
+  text-transform: none;
+}
+
+.text-small {
+  font-size: $font-size-small;
+
+  &.medium {
+    font-weight: 500;
+
+    b {
+      font-weight: bold;
+  }
+  }
+}
+
+.text-regular {
+  font-size: $font-size;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.text-large {
+  font-size: $font-size*1.5;
+}
+
+.text-medium {
+  font-size: $font-size * 1.25;
+}
+
+.text-x-large {
+  font-size: $font-size*2;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-body {
+  color: $text-color;
+}
+
+.text-grey-dark {
+  color: $grey-dark;
+}
+
+.text-action-disabled {
+  clear: both;
+  color: $grey;
+  white-space: nowrap;
+
+  &:hover {
+    font-weight: bold;
+    color: $grey;
+  }
+}
+
+.text-action {
+  clear: both;
+  color: $black;
+  white-space: nowrap;
+  &:hover {
+    color: $grey-dark;
+  }
+}
+
+.report-grid {
+  background-color: $white;
+}
+
+.selected-open {
+  background-color:  $blue-25;
+}
+
+.text-action-row {
+  clear: both;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $blue-25;
+  }
+}
+
+.text-coal-dark {
+  color: $coal-dark;
+}
+
+.text-ok {
+  color: $status-green;
+}
+
+.text-warning {
+  color: $status-orange;
+}
+
+.text-alert {
+  color: $status-red;
+}
+
+.text-horizontal {
+  display: inline-block;
+  margin-right: $base-margin;
+
+  &.separator-right {
+    padding-right: $base-margin;
+    border-right: 1px solid $grey-75;
+  }
+}
+
+.inline {
+  display: inline;
+}
+
+.icon-prefix {
+  margin-right: 6px;
+}
+
+.icon-suffix {
+  margin-left: 6px;
+}
+
+
+// Alignments
+// ----------
+
+.v-middle {
+  vertical-align: middle;
+}
+
+.v-baseline,
+.btn-link > .v-baseline {
+  vertical-align: baseline;
+}
+
+
+// Paddings
+// --------
+
+.padding {
+  padding: $base-margin;
+}
+
+.padding-sm {
+  padding: ($base-margin/2);
+}
+
+.padding-md {
+  padding: ($base-margin * 1.5) 0;
+}
+
+.padding-lg {
+  padding: ($base-margin * 2) 0;
+}
+
+.padding-xl {
+  padding: ($base-margin * 3);
+}
+
+.padding-top {
+
+  &,
+  .table & {
+    padding-top: $base-margin;    
+  }
+}
+
+.padding-top-lg {
+  padding-top: $base-margin * 2;
+}
+
+.padding-right {
+  padding-right: $base-margin;
+}
+
+.padding-right-lg {
+  padding-right: $base-margin * 2;
+}
+
+.padding-bottom {
+  padding-bottom: $base-margin;
+}
+
+.padding-bottom-medium {
+  padding-bottom: $base-margin * 1.5;
+}
+
+.padding-bottom-lg {
+  padding-bottom: $base-margin * 2;
+}
+
+.padding-left {
+  padding-left: $base-margin;
+}
+
+.padding-left-lg {
+  padding-left: $base-margin * 2;
+}
+
+.padding-left-xl {
+  padding-left: $base-margin * 3;
+}
+
+.pl5 {
+  padding-left: 5px;
+}
+
+.pl20 {
+  padding-left: 20px;
+}
+
+.pl30 {
+  padding-left: 30px;
+}
+
+.pt2 {
+  padding-top: 2px;
+}
+
+// Margins
+// -------
+
+.margin-none {
+  margin: 0;
+}
+
+.margin {
+  margin: $base-margin;
+}
+
+.margin-md {
+  margin: ($base-margin * 1.5) 0;
+}
+
+.margin-lg {
+  margin: ($base-margin * 2) 0;
+}
+
+.margin-xl {
+  margin: ($base-margin * 3);
+}
+
+.margin-xxl {
+  margin: ($base-margin * 4);
+}
+
+// Top
+
+.margin-top-none {
+  margin-top: 0;
+}
+
+.margin-top-sm {
+  margin-top: $base-margin / 2;
+}
+
+.margin-top {
+  margin-top: $base-margin;
+}
+
+.margin-top-md {
+  margin-top: ($base-margin * 1.5);
+}
+
+.margin-top-lg {
+  margin-top: ($base-margin * 2);
+}
+
+.margin-top-xl {
+  margin-top: ($base-margin * 3);
+}
+
+.margin-top-xxl {
+  margin-top: ($base-margin * 4);
+}
+
+// Right
+
+.margin-right-none {
+  margin-right: 0;
+}
+
+.margin-right-sm {
+  margin-right: $base-margin / 2;
+}
+
+.margin-right {
+  margin-right: $base-margin;
+}
+
+.margin-right-md {
+  margin-right: ($base-margin * 1.5);
+}
+
+.margin-right-lg {
+  margin-right: ($base-margin * 2);
+}
+
+.margin-right-xl {
+  margin-right: ($base-margin * 3);
+}
+
+.margin-right-xxl {
+  margin-right: ($base-margin * 4);
+}
+
+
+// Bottom
+
+
+.margin-bottom-none {
+  margin-bottom: 0;
+}
+
+.margin-bottom-sm {
+  margin-bottom: $base-margin / 2;
+}
+
+.margin-bottom-sm-m {
+  margin-bottom: $base-margin * 0.75;
+}
+
+.margin-bottom {
+  margin-bottom: $base-margin;
+}
+
+.margin-bottom-md {
+  margin-bottom: ($base-margin * 1.5);
+}
+
+.margin-bottom-lg {
+  margin-bottom: ($base-margin * 2);
+}
+
+.margin-bottom-xl {
+  margin-bottom: ($base-margin * 3);
+}
+
+.margin-bottom-xxl {
+  margin-bottom: ($base-margin * 4);
+}
+
+// Left
+
+.margin-left-none {
+  margin-left: 0;
+}
+
+.margin-left-sm {
+  margin-left: $base-margin / 2;
+}
+
+.margin-left-md {
+  margin-left: ($base-margin * 1.5);
+}
+
+.margin-left {
+  margin-left: $base-margin;
+}
+
+.margin-left-lg {
+  margin-left: $base-margin * 2;
+}
+
+.margin-left-xl {
+  margin-left: $base-margin * 3;
+}
+
+.margin-left-xxl {
+  margin-left: $base-margin * 4;
+}
+
+.margin-bottom-2 {
+  margin-bottom: 2px;
+}
+
+.margin-top-2 {
+  margin-top: 51px;
+}
+
+// Elements
+// --------
+
+.inline-block {
+  display: inline-block;
+
+  .icon + &,
+  + .icon {
+    margin-left: $base-margin / 2;
+  }
+}
+
+.p-separator {
+  margin: 0 $base-margin;
+  border-right: 1px solid $grey-75;
+}
+
+.container-width {
+  max-width: $content-max-width + ($container-padding * 2);
+  padding: 0 $container-padding;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.has-top-connector {
+  position: relative;
+  margin-top: $base-margin * 1.5;
+
+  &::after {
+    position: absolute;
+    bottom: 100%;
+    left: $base-margin / 2;
+    height: $base-margin;
+    margin-bottom: 2px;
+    border-left: 2px solid $grey-dark;
+    content: '';
+  }
+}
+
+.pagination-text {
+  display: inline-block;
+  margin-right: $base-margin;
+  font-size: $font-size-small;
+  font-weight: 500;
+  color: $coal-25;
+  vertical-align: middle;
+
+  .dropdown & {
+    color: $grey;
+  }
+}
+
+.hg-bold {
+  font-weight: 600;
+}
+
+.right-divider {
+  border-right: 2px solid $grey-75;
+
+}
+
+.left-divider {
+  border-left: 2px solid $grey-75;
+}
+
+.bottom-divider {
+  border-bottom: 2px solid $grey-75;
+}
+
+.top-divider {
+  border-top: 2px solid $grey-75;
+}
+
+.border-grey {
+  border: 2px solid $grey-75;
+}
+
+.border-thin-grey {
+  border: 1px solid $grey-75;
+}
+
+.grey-dark {
+  color: $grey-dark;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.cursorDefault {
+  cursor: default;
+}
+
+.text-color-white {
+  color: white;
+}
+
+.bg-grey {
+  background-color: $grey-50;
+}
+
+.bg-red {
+  background-color: #ee514f;
+}
+
+.bg-blue {
+  background-color: $blue;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.bg-yellow {
+  background-color: $yellow;
+}
+
+.bg-purple {
+  background-color:  $purple;
+}
+
+.bg-blue-50 {
+  background-color: $blue-50;
+}
+
+.bg-black {
+  background-color: $coal-dark;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-orange {
+  background-color: $status-orange;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Floats
+// -------------------------
+
+/*.clearfix {
+  @include clearfix;
+}
+.center-block {
+  @include center-block;
+}*/
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+
+// Toggling content
+// -------------------------
+
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  @include text-hide;
+}
+
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+  display: none !important;
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}
