@@ -1,0 +1,4 @@
+NODE_ENV='development'
+FOO=BAR
+PORT=8000
+openBrowser=false

@@ -1,0 +1,63 @@
+// Side Column
+// ===========
+
+$scrollbar-width: 17px;
+
+.side-col {
+  position: fixed;
+  top: $nav-height;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: $coal-25;
+}
+
+.side-col-content {  
+  background: $coal-25;
+  position: relative;
+  width: $side-col-width - $scrollbar-width;
+  height: 100%;
+  min-width: $side-col-width - $scrollbar-width;
+  padding: 20px $container-padding $container-padding;
+  margin-right: $scrollbar-width;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-left: 2px solid $grey-75;
+  transition: margin 500ms;
+
+  .side-col-close {
+    position: absolute;
+    top: $container-padding / 2;
+    right: $container-padding / 2;
+    cursor: pointer;
+    transform: translate(50%, -50%);
+
+    &:hover {
+
+      .icon {
+        stroke: $coal-75;
+      }
+    }
+
+    .icon {
+      stroke: $grey-dark;
+    }
+  }
+}
+
+
+// Side Column transition
+// ----------------------
+
+.side-col-transition-enter {
+  margin-right: -$side-col-width;
+  transition: margin 0;
+}
+
+.side-col-transition-leave {
+  margin-right: 0;
+
+  &.side-col-transition-leave-active {
+    margin-right: -$side-col-width;
+  }
+}
