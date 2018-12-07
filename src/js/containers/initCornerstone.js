@@ -33,18 +33,19 @@ cornerstoneTools.toolColors.setActiveColor('rgb(0, 255, 0)');
 const config = {
   maxWebWorkers: navigator.hardwareConcurrency || 1,
   startWebWorkersOnDemand: false,
-  webWorkerPath: window.location + '/js/cornerstoneWADOImageLoaderWebWorker.min.js',
+  webWorkerPath: '/js/cornerstoneWADOImageLoaderWebWorker.min.js',
   webWorkerTaskPaths: [],
   taskConfiguration: {
     decodeTask: {
       loadCodecsOnStartup: true,
       initializeCodecsOnStartup: false,
-      codecsPath: window.location + '/js/cornerstoneWADOImageLoaderCodecs.min.js',
+      codecsPath: '/js/cornerstoneWADOImageLoaderCodecs.min.js',
       usePDFJS: false,
       strict: false
     }
   }
 };
+debugger;
 
 cornerstoneWADOImageLoader.webWorkerManager.initialize(config);
 
