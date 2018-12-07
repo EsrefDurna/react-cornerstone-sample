@@ -3,19 +3,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './ImageScrollbar.sass';
 //import { OHIF } from '../../../meteor/ohif-core/main'; TODO
-const OHIF = { commands: { 
-    run: () => { }
-  }
-};
+//import helpers from '../../../helpers'
+//const OHIF = helpers.getOHIF(); TODO
 
-class ImageScrollbar extends Component {
+class ImageScrollbar extends Component {  
+  
   constructor(props) {
     super(props);
 
     this.onChange = this.onChange.bind(this);
     this.onKeyDown = this.onKeyDown.bind(this);
   }
-
+  
   render() {
     this.style = {
       width: `${this.props.height}`
@@ -54,7 +53,7 @@ class ImageScrollbar extends Component {
       DOWN: 40,
       UP: 38
     };
-
+    let OHIF = {}
     if (event.which === keys.DOWN) {
       OHIF.commands.run('scrollDown');
       event.preventDefault();

@@ -57,13 +57,10 @@ const resolveModule = (resolveFn, filePath) => {
   const extension = moduleFileExtensions.find(extension =>
     fs.existsSync(resolveFn(`${filePath}.${extension}`))
   );
-
   if (extension) {
     return resolveFn(`${filePath}.${extension}`);
   }
-
-  let x = resolveFn(`${filePath}.js`);
-  return x;
+  return resolveFn(`${filePath}.js`);
 };
 
 // config after eject: we're in ./config/

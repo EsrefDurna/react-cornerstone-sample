@@ -7,7 +7,10 @@ import ViewportOverlay from '../ViewportOverlay/ViewportOverlay.js';
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator.js';
 import ViewportOrientationMarkers from '../ViewportOrientationMarkers/ViewportOrientationMarkers.js';
 import './CornerstoneViewport.css';
+//import { OHIF } from '../../../helpers/';
+const { getOHIF } = require('../../../helpers/index.js').default;
 
+const OHIF = getOHIF();
 
 const EVENT_RESIZE = 'resize';
 const loadIndicatorDelay = 45;
@@ -38,8 +41,8 @@ class CornerstoneViewport extends Component {
   };
 
   constructor(props) {
-    super(props);
-    debugger;
+    super(props);    
+    
     this.cornerstone = props.cornerstone;
     this.cornerstoneTools = props.cornerstoneTools;    
     //this.scrollToIndex = this.cornerstoneTools.import('util/scrollToIndex'); TODO NOT WORKING
@@ -144,20 +147,22 @@ class CornerstoneViewport extends Component {
             viewport={this.state.viewport}
             imageId={this.state.imageId}
             numImagesLoaded={this.state.numImagesLoaded}
+            cornerstone={this.props.cornerstone}                
+            cornerstoneTools={this.props.cornerstoneTools}
           />
           <ViewportOrientationMarkers
             imageId={this.state.imageId}
             viewport={this.state.viewport}
           />
         </div>
-        {this.displayScrollbar && (
+        { this.displayScrollbar  ?
           <ImageScrollbar
             onInputCallback={this.imageSliderOnInputCallback}
             max={this.state.stack.imageIds.length - 1}
             value={this.state.imageScrollbarValue}
             height={this.state.viewportHeight}
           />
-        )}
+        : null }
         {/* this.state.bidirectionalAddLabelShow && (
         <Labelling
           measurementData={this.bidirectional.measurementData}
@@ -222,8 +227,7 @@ class CornerstoneViewport extends Component {
   }
 
   componentDidMount() {
-    const element = this.element;
-    debugger;
+    const element = this.element;    
     this.eventHandlerData = [
       {
         eventTarget: element,
