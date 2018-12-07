@@ -2,8 +2,8 @@
     "stack": {
       "currentImageIdIndex": 0,
       "imageIds": [
-        "dicomweb://rawgit.com/chafey/byozfwv/master/sampleData/1.2.840.113619.2.5.1762583153.215519.978957063.80.dcm",
-        "dicomweb://rawgit.com/chafey/byozfwv/master/sampleData/1.2.840.113619.2.5.1762583153.215519.978957063.81.dcm"
+        "dicomweb://localhost:8000/1.2.840.113619.2.5.1762583153.215519.978957063.80.dcm",
+        "dicomweb://localhost:8000/1.2.840.113619.2.5.1762583153.215519.978957063.81.dcm"
       ]
     }
 }

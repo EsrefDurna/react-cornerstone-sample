@@ -5,11 +5,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import CornerstoneViewport from './CornerstoneViewport/CornerstoneViewport/CornerstoneViewport';
 import studyList from './studylist/studyList';
 import { Route, Router } from 'react-router-dom';
-
-
-import { cornerstone, cornerstoneTools } from '../meteor/ohif-cornerstone/main';
-//import cornerstone from 'cornerstone-core';
-//import cornerstoneTools from 'cornerstone-tools';
+import { cornerstone, cornerstoneTools } from './initCornerstone';
 
 import exampleData from '../testdata/study1.json'
 
