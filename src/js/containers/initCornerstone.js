@@ -45,7 +45,7 @@ const config = {
     }
   }
 };
-debugger;
+
 
 cornerstoneWADOImageLoader.webWorkerManager.initialize(config);
 

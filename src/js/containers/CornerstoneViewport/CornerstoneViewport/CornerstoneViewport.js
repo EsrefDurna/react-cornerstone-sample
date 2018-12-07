@@ -24,14 +24,19 @@ function setToolsPassive(cornerstoneTools, tools) {
 const logger = console;
 
 function initializeTools(cornerstoneTools, tools) {
+  let notFound = [];  
   Array.from(tools).forEach(tool => {
     const apiTool = cornerstoneTools[`${tool.name}Tool`];
-    if (apiTool) {
+    if (apiTool) {      
       cornerstoneTools.addTool(apiTool, tool.configuration);
     } else {
-      throw new Error(`Tool not found: ${tool.name}Tool`);
+      notFound.push(tool.name);
     }
   });
+  if (notFound.length > 0) {
+    throw new Error(`Tool not found: ${notFound.join(" , ")} Tool`);
+  }
+  
 }
 
 class CornerstoneViewport extends Component {
@@ -44,7 +49,7 @@ class CornerstoneViewport extends Component {
     super(props);    
     
     this.cornerstone = props.cornerstone;
-    this.cornerstoneTools = props.cornerstoneTools;    
+    this.cornerstoneTools = props.cornerstoneTools;        
     //this.scrollToIndex = this.cornerstoneTools.import('util/scrollToIndex'); TODO NOT WORKING
 
     // TODO: Allow viewport as a prop
