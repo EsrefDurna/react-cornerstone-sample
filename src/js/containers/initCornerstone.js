@@ -1,16 +1,22 @@
-const dicomParser = require('dicom-parser');
+/*const dicomParser = require('dicom-parser');
 const cornerstone = require('cornerstone-core');
 const cornerstoneWADOImageLoader = require('cornerstone-wado-image-loader');
 const cornerstoneMath = require('cornerstone-math');
 const cornerstoneTools = require('cornerstone-tools');
-const Hammer = require('hammerjs');
+const Hammer = require('hammerjs');*/
+
+import dicomParser from 'dicom-parser';
+import cornerstone from 'cornerstone-core';
+import cornerstoneWADOImageLoader from 'cornerstone-wado-image-loader';
+import cornerstoneMath from 'cornerstone-math';
+import cornerstoneTools from 'cornerstone-tools';
+import Hammer from 'hammerjs';
 
 cornerstoneTools.external.cornerstone = cornerstone;
 cornerstoneTools.external.Hammer = Hammer;
 cornerstoneTools.external.cornerstoneMath = cornerstoneMath;
 
-//cornerstoneTools.init(); TODO NOT WORKING?
-
+cornerstoneTools.init();
 
 // Set the tool font and font size
 // context.font = "[style] [variant] [weight] [size]/[line height] [font family]";
@@ -27,8 +33,7 @@ cornerstoneTools.toolColors.setToolColor('rgb(255, 255, 0)');
 // Set color for active tools
 cornerstoneTools.toolColors.setActiveColor('rgb(0, 255, 0)');
 
-//cornerstoneTools.store.state.touchProximity = 40; //TODO NOT WORKING
-
+cornerstoneTools.store.state.touchProximity = 40;
 
 const config = {
   maxWebWorkers: navigator.hardwareConcurrency || 1,
@@ -46,14 +51,7 @@ const config = {
   }
 };
 
-
 cornerstoneWADOImageLoader.webWorkerManager.initialize(config);
 
 cornerstoneWADOImageLoader.external.cornerstone = cornerstone;
 cornerstoneWADOImageLoader.external.dicomParser = dicomParser;
-
-module.exports = {
-  cornerstone: cornerstone,
-  cornerstoneTools: cornerstoneTools,
-  cornerstoneWADOImageLoader: cornerstoneWADOImageLoader
-}
