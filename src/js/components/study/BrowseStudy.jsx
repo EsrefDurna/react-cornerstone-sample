@@ -6,7 +6,7 @@ export class BrowseStudy extends Component {
   render() {
     return (
       <div className="side-col-content">
-        <a className="side-col-close" onClick={this.props.handleClose}>
+        <a  href="#" className="side-col-close" onClick={this.props.handleClose}>
           <IconClose width={12} height={12} />
         </a>
         <h3 className="page-header">

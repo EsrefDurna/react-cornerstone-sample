@@ -7,7 +7,7 @@ export class About extends Component {
         <Modal show={this.props.showModal} >
             <Modal.Header>
                 <h2>About</h2>
-                <a className="close" onClick={this.props.close}>
+                <a href="#" className="close" onClick={this.props.close}>
                     <IconClose width={12} height={12} />
                 </a>
             </Modal.Header>
