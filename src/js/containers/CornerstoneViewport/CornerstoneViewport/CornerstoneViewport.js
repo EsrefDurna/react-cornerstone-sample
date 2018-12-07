@@ -17,26 +17,25 @@ const loadIndicatorDelay = 45;
 
 function setToolsPassive(cornerstoneTools, tools) {
   tools.forEach(tool => {
-    cornerstoneTools.setToolPassive(tool);
+    //cornerstoneTools.setToolPassive(tool); TODO NOT WORKING
   });
 }
 
 const logger = console;
 
-function initializeTools(cornerstoneTools, tools) {
-  let notFound = [];  
+function initializeTools(cornerstoneTools, tools, error=false) {
+  let notFound = [];    
   Array.from(tools).forEach(tool => {
     const apiTool = cornerstoneTools[`${tool.name}Tool`];
     if (apiTool) {      
-      cornerstoneTools.addTool(apiTool, tool.configuration);
+      cornerstoneTools.addTool(apiTool, tool.configuration);      
     } else {
       notFound.push(tool.name);
     }
   });
-  if (notFound.length > 0) {
+  if (error && notFound.length > 0) {
     throw new Error(`Tool not found: ${notFound.join(" , ")} Tool`);
-  }
-  
+  }  
 }
 
 class CornerstoneViewport extends Component {
@@ -50,7 +49,7 @@ class CornerstoneViewport extends Component {
     
     this.cornerstone = props.cornerstone;
     this.cornerstoneTools = props.cornerstoneTools;        
-    //this.scrollToIndex = this.cornerstoneTools.import('util/scrollToIndex'); TODO NOT WORKING
+    this.scrollToIndex = this.cornerstoneTools.import('util/scrollToIndex'); 
 
     // TODO: Allow viewport as a prop
     const { stack } = props.viewportData;
@@ -413,6 +412,7 @@ class CornerstoneViewport extends Component {
           - Two-finger Pan
           - Three (or more) finger Stack Scroll
         */
+       /*
         this.cornerstoneTools.setToolActive('PanMultiTouch', {
           mouseButtonMask: 0,
           isTouchActive: true
@@ -425,7 +425,8 @@ class CornerstoneViewport extends Component {
         this.cornerstoneTools.setToolActive('StackScrollMultiTouch', {
           mouseButtonMask: 0,
           isTouchActive: true
-        });
+        });*/
+        //TODO NOT WORKING
 
         this.cornerstoneTools.stackPrefetch.setConfiguration({
           maxImagesToPrefetch: Infinity,
@@ -611,7 +612,8 @@ class CornerstoneViewport extends Component {
       mouseButtonMask: isPanToolActive ? [1, 4] : [4],
       isTouchActive: isPanToolActive
     };
-    this.cornerstoneTools.setToolActive('Pan', panOptions);
+    
+    //this.cornerstoneTools.setToolActive('Pan', panOptions); //TODO NOT WORKING
 
     // zoom is the default tool for right mouse button
     const isZoomToolActive = activeTool === 'Zoom';
@@ -619,12 +621,15 @@ class CornerstoneViewport extends Component {
       mouseButtonMask: isZoomToolActive ? [1, 2] : [2],
       isTouchActive: isZoomToolActive
     };
-    this.cornerstoneTools.setToolActive('Zoom', zoomOptions);
+    //this.cornerstoneTools.setToolActive('Zoom', zoomOptions); TODO NOT WORKING
 
-    this.cornerstoneTools.setToolActive(activeTool, {
+    /*this.cornerstoneTools.setToolActive(activeTool, {
       mouseButtonMask: 1,
       isTouchActive: true
-    });
+    });  
+    TODO NOT WORKING
+    */ 
+    
   };
 
   onStackScroll(event) {

@@ -5,7 +5,10 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import CornerstoneViewport from './CornerstoneViewport/CornerstoneViewport/CornerstoneViewport';
 import studyList from './studylist/studyList';
 import { Route, Router } from 'react-router-dom';
-import { cornerstone, cornerstoneTools } from './initCornerstone';
+//import { cornerstone, cornerstoneTools } from './initCornerstone';
+import './initCornerstone';
+import cornerstone from 'cornerstone-core';
+import cornerstoneTools from 'cornerstone-tools';
 
 import exampleData from '../testdata/study1.json'
 
